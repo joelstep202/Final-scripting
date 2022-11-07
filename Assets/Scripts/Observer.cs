@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,12 @@ public class Observer : MonoBehaviour
     public Transform player;
     public GameEnding gameEnding;
 
+    public bool detected = false;
+
+    public FinalCollider finalCollider;
+
     bool m_IsPlayerInRange;
+
 
     void OnTriggerEnter (Collider other)
     {
@@ -37,9 +43,18 @@ public class Observer : MonoBehaviour
             {
                 if (raycastHit.collider.transform == player)
                 {
-                    gameEnding.CaughtPlayer ();
+                    detected = true;
                 }
-            }
+                else
+                {
+                    detected = false;
+                }
+            }          
+        }
+        
+        if (finalCollider.collicion == true)
+        {
+            gameEnding.CaughtPlayer();
         }
     }
 }

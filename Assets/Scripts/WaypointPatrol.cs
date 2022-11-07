@@ -7,6 +7,9 @@ public class WaypointPatrol : MonoBehaviour
 {
     public NavMeshAgent navMeshAgent;
     public Transform[] waypoints;
+    public Transform player;
+
+    public Observer observer;
 
     int m_CurrentWaypointIndex;
 
@@ -17,10 +20,17 @@ public class WaypointPatrol : MonoBehaviour
 
     void Update ()
     {
-        if(navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
+        if (observer.detected == false)
         {
-            m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;
-            navMeshAgent.SetDestination (waypoints[m_CurrentWaypointIndex].position);
+            if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
+            {
+                m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;
+                navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
+            }
+        }
+        else
+        {
+            navMeshAgent.SetDestination(player.position);
         }
     }
 }
