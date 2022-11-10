@@ -9,6 +9,7 @@ public class Observer : MonoBehaviour
     public GameEnding gameEnding;
 
     public bool detected = false;
+    public bool staticEnemy = false;
 
     public FinalCollider finalCollider;
 
@@ -41,13 +42,20 @@ public class Observer : MonoBehaviour
             
             if (Physics.Raycast (ray, out raycastHit))
             {
-                if (raycastHit.collider.transform == player)
+                if (staticEnemy == false)
                 {
-                    detected = true;
+                    if (raycastHit.collider.transform == player)
+                    {
+                        detected = true;
+                    }
+                    else
+                    {
+                        detected = false;
+                    }
                 }
                 else
                 {
-                    detected = false;
+                    gameEnding.CaughtPlayer();
                 }
             }          
         }

@@ -142,6 +142,11 @@ PrefabInstance:
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 5642716984738007026}
+    - target: {fileID: 4078855156467671687, guid: 39d0626ce76d1884da050e0e509a5540,
+        type: 3}
+      propertyPath: staticEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6199127110365035078, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: m_RootOrder
@@ -205,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 8038108750564668487, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0626ce76d1884da050e0e509a5540, type: 3}
@@ -713,6 +718,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2008973354732098957}
+    - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
+        type: 3}
       propertyPath: waypoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -754,7 +764,7 @@ PrefabInstance:
     - target: {fileID: 5075534488604402034, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6925745739663848697, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
@@ -1148,6 +1158,11 @@ PrefabInstance:
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 5642716984738007026}
+    - target: {fileID: 4078855156467671687, guid: 39d0626ce76d1884da050e0e509a5540,
+        type: 3}
+      propertyPath: staticEnemy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6199127110365035078, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: m_RootOrder
@@ -1211,7 +1226,7 @@ PrefabInstance:
     - target: {fileID: 8038108750564668487, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0626ce76d1884da050e0e509a5540, type: 3}
@@ -1358,6 +1373,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2008973354732098957}
+    - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
+        type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1389,7 +1409,7 @@ PrefabInstance:
     - target: {fileID: 5075534488604402034, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6925745739663848697, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
@@ -1704,6 +1724,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2008973354732098957}
+    - target: {fileID: 1176990128951978394, guid: abeb186619cc7e6419cb81e1e4dfa162,
+        type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1735,7 +1760,7 @@ PrefabInstance:
     - target: {fileID: 5075534488604402034, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6925745739663848697, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
@@ -2134,11 +2159,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gargoyle
-      objectReference: {fileID: 0}
-    - target: {fileID: 8038108750564668487, guid: 39d0626ce76d1884da050e0e509a5540,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0626ce76d1884da050e0e509a5540, type: 3}
