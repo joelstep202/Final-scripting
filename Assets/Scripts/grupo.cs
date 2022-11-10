@@ -18,10 +18,6 @@ public class grupo : MonoBehaviour
             Instance = this;
         }
     }
-    public void Asignar(AudioClip clip)
-    {
-        sfx.clip = clip;
-    }
     public void ActivarSonido(AudioClip clip)
     {
         sfx.PlayOneShot(clip);
