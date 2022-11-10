@@ -225,6 +225,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1663644928278714035, guid: 8a6f7024e2eb90140bdf570ef653bac8,
         type: 3}
+      propertyPath: staticEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663644928278714035, guid: 8a6f7024e2eb90140bdf570ef653bac8,
+        type: 3}
       propertyPath: finalCollider
       value: 
       objectReference: {fileID: 1540814156}
