@@ -7,9 +7,10 @@ public class GameEnding : MonoBehaviour
     public float displayImageDuration = 1f;
     public GameObject player;
     public CanvasGroup exitBackgroundImageCanvasGroup;
-    public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
-    public AudioSource caughtAudio;
+
+    [SerializeField] private AudioClip caught;
+    [SerializeField] private AudioClip win;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
@@ -33,19 +34,19 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
-            EndLevel (exitBackgroundImageCanvasGroup, false, exitAudio);
+            EndLevel (exitBackgroundImageCanvasGroup, false, win);
         }
         else if (m_IsPlayerCaught)
         {
-            EndLevel (caughtBackgroundImageCanvasGroup, true, caughtAudio);
+            EndLevel (caughtBackgroundImageCanvasGroup, true, caught);
         }
     }
 
-    void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
+    void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart, AudioClip audioSource)
     {
         if (!m_HasAudioPlayed)
         {
-            audioSource.Play();
+            grupo.Instance.Sonidofuente(audioSource);
             m_HasAudioPlayed = true;
         }
             
