@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,13 @@ public class Observer : MonoBehaviour
     public Transform player;
     public GameEnding gameEnding;
 
+    public bool detected = false;
+    public bool staticEnemy = false;
+
+    public FinalCollider finalCollider;
+
     bool m_IsPlayerInRange;
+
 
     void OnTriggerEnter (Collider other)
     {
@@ -35,11 +42,27 @@ public class Observer : MonoBehaviour
             
             if (Physics.Raycast (ray, out raycastHit))
             {
-                if (raycastHit.collider.transform == player)
+                if (staticEnemy == false)
                 {
-                    gameEnding.CaughtPlayer ();
+                    if (raycastHit.collider.transform == player)
+                    {
+                        detected = true;
+                    }
+                    else
+                    {
+                        detected = false;
+                    }
                 }
-            }
+                else
+                {
+                    gameEnding.CaughtPlayer();
+                }
+            }          
+        }
+        
+        if (finalCollider.collicion == true)
+        {
+            gameEnding.CaughtPlayer();
         }
     }
 }
